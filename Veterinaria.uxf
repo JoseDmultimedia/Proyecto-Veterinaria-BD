@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>152</y>
+      <w>168</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>SINTOMAS
+--
+id_Sintoma: numerico &lt;&lt;PK&gt;&gt;
+descripcionS: texto
+duracionS:texto
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>120</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>MASCOTA
+--
+id_Mascota: numerico &lt;&lt;PK&gt;&gt;
+nombreM: texto
+edadM: texto
+especieM:texto
+subespecieM:texto[0..1]
+fotoMascotaM:imagen[0..1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>72</y>
+      <w>152</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>DUEÑO	
+--
+id_Dueño: numerico &lt;&lt;PK&gt;&gt;
+nombre1D: texto
+nombre2D:texto[0..1]
+apellido1D:texto
+apellido2D:texto[0..1]
+edadD: texto
+direccionD:texto
+correoD:texto
+fotoDueño:imagen[0..1]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>984</x>
+      <y>136</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>TELEFONO
+--
+id_telD: numerico &lt;&lt;PK&gt;&gt;
+numeroCelD: texto
+telefonofijo: texto</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>488</y>
+      <w>160</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>REVISION
+--
+id_Revision: numerico &lt;&lt;PK&gt;&gt;
+criterioR:texto
+resultado:texto
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>808</x>
+      <y>528</y>
+      <w>168</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>TRATAMIENTO
+--
+id_tratamiento: numerico &lt;&lt;PK&gt;&gt;
+duracion: numerico
+medicamentos: texto
+fechaInicio:date
+fechaFin:date[0..1]
+sustentacionT: texto
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>504</y>
+      <w>152</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>VETERINARIO
+--
+id_medicoV: numerico &lt;&lt;PK&gt;&gt;
+nombreV: texto
+direccionV: texto
+telefonoV:texto
+emailV:texto
+salarioV: numerico
+categoriaV:texto
+turnoV:texto
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>272</x>
+      <y>168</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+&lt; Padecer </panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>160</y>
+      <w>184</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+&lt; 
+Tener </panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>216</y>
+      <w>336</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Pedir
+&lt; </panel_attributes>
+    <additional_attributes>390.0;10.0;390.0;80.0;10.0;80.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>408</y>
+      <w>64</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Atender
+▲</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>344</y>
+      <w>96</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+Efectuar
+ &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0;100.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>168</y>
+      <w>136</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+poseer &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>320</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>CITA
+--
+id_Cita: numerico &lt;&lt;PK&gt;&gt;
+horarioCita:texto
+motivoCita:texto
+gravedadCita:texto
+fechaCita:date
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>392</y>
+      <w>120</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*
+▲
+Mandar</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>344</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>EXAMEN
+--
+id_Examen:numerico&lt;&lt;PK&gt;&gt;
+nombreExamen:texto
+fechaExamen:date
+recomendacionE:texto
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1016</x>
+      <y>424</y>
+      <w>168</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>DIAGNOSTICO
+--
+id_Diagnostico:numerico&lt;&lt;PK&gt;&gt;
+descripcionD:texto
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>368</y>
+      <w>160</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Concluir &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0;170.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>472</y>
+      <w>160</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Determinar 
+&lt; 
+</panel_attributes>
+    <additional_attributes>10.0;140.0;170.0;140.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
